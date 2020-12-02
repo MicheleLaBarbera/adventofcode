@@ -15,15 +15,14 @@ for policy in policies:
 
   is_valid = True
 
-  if(len(password) > max_count):
-    if(password[min_count] == char_check and password[max_count] == char_check):
-      is_valid = False
+  if(password[min_count] == char_check and password[max_count] == char_check):
+    is_valid = False
 
-    elif(password[min_count] != char_check and password[max_count] != char_check):
-      is_valid = False
+  elif(password[min_count] != char_check and password[max_count] != char_check):
+    is_valid = False
 
-    if(is_valid):
-      count += 1
+  if(is_valid):
+    count += 1
 
 print("Valid passwords count: " + str(count))
     

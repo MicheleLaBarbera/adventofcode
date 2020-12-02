@@ -13,10 +13,7 @@ for policy in policies:
 
   password = splitted_policy[2]
 
-  occurrences = 0
-  for i in range(0, len(password)):
-    if(password[i] == char_check):
-      occurrences += 1
+  occurrences = password.count(char_check)
 
   if(min_count <= occurrences <= max_count):
     count += 1
