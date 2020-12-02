@@ -13,15 +13,7 @@ for policy in policies:
 
   password = splitted_policy[2].strip()
 
-  is_valid = True
-
-  if(password[min_count] == char_check and password[max_count] == char_check):
-    is_valid = False
-
-  elif(password[min_count] != char_check and password[max_count] != char_check):
-    is_valid = False
-
-  if(is_valid):
+  if((password[min_count] == char_check) ^ (password[max_count] == char_check)):
     count += 1
 
 print("Valid passwords count: " + str(count))
